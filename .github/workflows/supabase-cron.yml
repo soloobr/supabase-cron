@@ -2,8 +2,7 @@ name: Chamando Edge Function do Supabase via Cron
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # ⏰ A cada 5 minutos
-  workflow_dispatch:      # 🔥 Permite também rodar manualmente
+    - cron: '*/1 * * * *' 
 
 jobs:
   chamar-edge:
