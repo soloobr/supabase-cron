@@ -1,0 +1,15 @@
+name: Chamando Edge Function do Supabase via Cron
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # ⏰ A cada 5 minutos
+  workflow_dispatch:      # 🔥 Permite também rodar manualmente
+
+jobs:
+  chamar-edge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Requisição para Edge Function
+      run: |
+        curl -X POST https://dtrmlcsymuexyjdbgeff.supabase.co/functions/v1/cron_notificacoes
