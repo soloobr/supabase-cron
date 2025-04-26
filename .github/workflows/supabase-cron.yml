@@ -3,7 +3,6 @@ name: Chamando Edge Function do Supabase via Cron
 on:
   schedule:
     - cron: '*/1 * * * *' 
-
 jobs:
   chamar-edge:
     runs-on: ubuntu-latest
